@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="css/flexslider.css" />
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- scroll style -->
+    <link rel="stylesheet" href="css/scroll.css" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -49,6 +51,8 @@
     <![endif]-->
   </head>
   <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
     <div id="fh5co-page">
       <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
       <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
@@ -247,6 +251,15 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- Flexslider -->
     <script src="js/jquery.flexslider-min.js"></script>
+  <!-- scrollbar JS -->
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
 
     <!-- MAIN JS -->
     <script src="js/main.js"></script>
