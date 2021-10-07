@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Vishal Radhakrishnan- Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title> Welcome to my Portfolio </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/netflix.css">	
+
+	<!-- scroll style -->
+    <link rel="stylesheet" href="css/scroll.css" />
+</head>
+	
+<body>
+	<!--- for scroll bar ----->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+	<header>
+		<a href="#" class="headlogo"><img src="images/mechflix2.png"></a>
+		<ul class="navigation">
+			<li><a href="#">About Me</a></li>
+			<li><a href="design.html">Design</a></li>
+			<li><a href="team.html">Work</a></li>
+			<li><a href="skills.html">Hall of Fame</a></li>
+		</ul>
+		<div class="searchbar">
+			<input type="text" placeholder="Search">
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+	</header>
+	<div class="banner">
+		<img src="images/vishal8.png" class="bg">
+		<div class="content">
+			<img src="images/vishalfin6.png" class="movieTitle">
+			<h4>
+				<span>2021</span>
+				<span>0+</span>
+				<span><8mins</span>
+				<span>Adventure</span>
+			</h4>
+			<p>My name is Vishal Radhakrishnan. I am currently on a design expedition as a Mechanical Engineering student at the University of Toronto. For this journey of innovation, to provide me with extra assistance, I am filling my bag-pack with the skills of Machine Learning, Robotics, and Engineering Business.</p>
+			<div class="playbutton">
+				<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+				<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+			</div>
+		</div>
+		<a class="playtrailer" onclick="toggleVideo();"><img src="images/play.png">Watch Trailer</a>
+
+		<ul class="sci">
+			<li><a href="https://www.facebook.com/vishal.radhakrishnan.96/" target="_blank"><img src="images/facebook.png"></a></li>
+			<li><a href="https://www.linkedin.com/in/vishal-radhakrishnan-39bb0a1b1/" target="_blank"><img src="images/linkedin.png"></a></li>
+			<li><a href="https://www.instagram.com/vishal.1402/" target="_blank"><img src="images/instagram.png"></a></li>
+		</ul>
+	</div>
+
+	<div class="trailer">
+		<video src="images/vid.mp4" controls="true" autoplay="true"></video>
+		<img src="images/close.png" class="close"  onclick="toggleVideo();">
+	</div>
+
+	<script>
+		function toggleVideo(){
+			const trailer = document.querySelector('.trailer');
+			const video = document.querySelector('video')
+			trailer.classList.toggle('active');
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+
+	<!-- scrollbar JS -->
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
+
+
+</body>
+
+</html>
