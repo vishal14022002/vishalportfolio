@@ -1,262 +1,92 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
+<html lang="en">
+<head>
+	<!--
+	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ISET</title>
+    <title>Vishal Radhakrishnan- Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	-->
 
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title> Welcome to my Portfolio </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/netflix.css">	
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico" />
+	<!-- scroll style -->
+    <link rel="stylesheet" href="css/scroll.css" />
+</head>
+	
+<body>
+	<!--- for scroll bar ----->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+	<header>
+		<a href="#" class="headlogo"><img src="images/mechflix2.png"></a>
+		<ul class="navigation">
+			<li><a href="#">About Me</a></li>
+			<li><a href="design.html">Design</a></li>
+			<li><a href="work.html">Work</a></li>
+			<li><a href="skills.html">Hall of Fame</a></li>
+		</ul>
+		<div class="searchbar">
+			<input type="text" placeholder="Search">
+			<i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+	</header>
+	<div class="banner">
+		<img src="images/vishal8.png" class="bg">
+		<div class="content">
+			<img src="images/vishalfin6.png" class="movieTitle">
+			<h4>
+				<span>2021</span>
+				<span>0+</span>
+				<span><8mins</span>
+				<span>Adventure</span>
+			</h4>
+			<p>My name is Vishal Radhakrishnan. I am currently on a design expedition as a Mechanical Engineering student at the University of Toronto. For this journey of innovation, to provide me with extra assistance, I am filling my bag-pack with the skills of Machine Learning, Robotics, and Engineering Business.</p>
+			<div class="playbutton">
+				<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+				<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+			</div>
+		</div>
+		<a class="playtrailer" onclick="toggleVideo();"><img src="images/play.png">Watch Trailer</a>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
-      rel="stylesheet"
-    />
+		<ul class="sci">
+			<li><a href="https://www.facebook.com/vishal.radhakrishnan.96/" target="_blank"><img src="images/facebook.png"></a></li>
+			<li><a href="https://www.linkedin.com/in/vishal-radhakrishnan-39bb0a1b1/" target="_blank"><img src="images/linkedin.png"></a></li>
+			<li><a href="https://www.instagram.com/vishal.1402/" target="_blank"><img src="images/instagram.png"></a></li>
+		</ul>
+	</div>
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css" />
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <!-- Flexslider  -->
-    <link rel="stylesheet" href="css/flexslider.css" />
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="css/style.css" />
+	<div class="trailer">
+		<video src="images/vid.mp4" controls="true" autoplay="true"></video>
+		<img src="images/close.png" class="close"  onclick="toggleVideo();">
+	</div>
 
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div id="fh5co-page">
-      <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-      <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-        <h1 id="fh5co-logo"><a href="index.html">ISET</a></h1>
-        <h2
-          class="fh5co-heading animate-box"
-          data-animate-effect="fadeInLeft"
-          style="text-align: center;"
-        >
-          Interplanetary Space Exploration Team
-        </h2>
+	<script>
+		function toggleVideo(){
+			const trailer = document.querySelector('.trailer');
+			const video = document.querySelector('video')
+			trailer.classList.toggle('active');
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
 
-        <div class="row text-center ">
-          <div class="col-8">
-            <img
-              src="images/logo2.png"
-              class="float-center"
-              style="height:70px; width:70px; margin-bottom:30px;"
-            />
-          </div>
-        </div>
-        <nav id="fh5co-main-menu" role="navigation">
-          <ul>
-            <li class="fh5co-active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Projects</a></li>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="account.html">Login</a></li>
-            <li><a href="mailto: iset@g.skule.ca">Email Us</a></li>
-            <li>
-              <a href="https://www.facebook.com/ISETUofT/" target="_blank"
-                ><i class="icon-facebook2"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/uoftiset/?fbclid=IwAR0ZMNDkEf5x12uPf9cMV0qj1kMVEuxF_Bi_GhwSb_WB9tAa0hd1iFo-3Vg&originalSubdomain=ca"
-                target="_blank"
-                ><i class="icon-linkedin2"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/uoft_iset/?fbclid=IwAR1veAh5BG17mZcsRYPVi7JEePNxtsOt3nX8FGYBJYdmS_0v6jIc_Wfc-F8"
-                target="_blank"
-                ><i class="icon-instagram"></i
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+	<!-- scrollbar JS -->
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
 
-      <div id="fh5co-main">
-        <aside id="fh5co-hero" class="js-fullheight">
-          <div class="flexslider js-fullheight">
-            <ul class="slides">
-              <li style="background-image: url(images/marsback.png);">
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text"
-                    >
-                      <div class="slider-text-inner">
-                        <h1>
-                          <strong></strong> We Are Engineering The ‍Home Of
-                          Tomorrow. MARS‍.
-                        </h1>
 
-                        <p></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li style="background-image: url(images/ship.jpg);">
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text"
-                    >
-                      <div class="slider-text-inner">
-                        <h1>
-                          One Team, One Mission: Make Martian Colonization a
-                          Reality
-                        </h1>
+</body>
 
-                        <p>
-                          <a class="btn btn-primary btn-learn" href="about.html"
-                            >Learn More<i class="icon-arrow-right3"></i
-                          ></a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li style="background-image: url(images/grup.jpg);">
-                <div class="overlay"></div>
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text"
-                    >
-                      <div class="slider-text-inner">
-                        <h1>
-                          Meet The Team Spearheading Our Mission Of Redefining
-                          Limits.
-                        </h1>
-
-                        <p>
-                          <a
-                            class="btn btn-primary btn-learn"
-                            href="members.html"
-                            >Learn More<i class="icon-arrow-right3"></i
-                          ></a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </aside>
-
-        <div class="fh5co-narrow-content">
-          <h2
-            class="fh5co-heading animate-box"
-            data-animate-effect="fadeInLeft"
-          >
-            Our Vision for future 
-          </h2>
-          <div class="row">
-            <div class="col-12">
-              <div
-                class="fh5co-feature animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="fh5co-icon">
-                  <i class="icon-eye"></i>
-                </div>
-                <div class="fh5co-text">
-                  <p>
-                    The Interplanetary Space Exploration Team (ISET) was founded
-                    on the basis of providing a platform for undergraduate
-                    students to actively take part in the Space Colonization
-                    field. Many misconceptions exist about the complexity of
-                    space design and who can get involved in it. While we admit
-                    that it is not easy, it is definitely a field that
-                    undergraduate students can be involved and excel in,
-                    especially with all the resources available to us at the
-                    University. In addition, the team aims to build sustainable
-                    Martian systems that would make it more feasible for Humans
-                    to settle on the Red Planet or simply harvest its resources
-                    for use on Earth. After all, WE might be the ones traveling
-                    there one day!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="get-in-touch">
-          <div class="fh5co-narrow-content">
-            <div class="row">
-              <div
-                class="col-md-4 animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <h2
-                  class="fh5co-heading animate-box"
-                  data-animate-effect="fadeInLeft"
-                >
-                  Check Out Our Projects
-                </h2>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <p class="fh5co-lead">
-                  Our main mission is to design systems that would not only
-                  allow us to settle on Mars, but also adapt to the planet’s
-                  environment once we get there!
-                </p>
-                <p>
-                  <a href="blog.html" class="btn btn-primary">Learn More</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Flexslider -->
-    <script src="js/jquery.flexslider-min.js"></script>
-
-    <!-- MAIN JS -->
-    <script src="js/main.js"></script>
-  </body>
 </html>
