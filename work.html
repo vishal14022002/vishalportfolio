@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vishal Radhakrishnan- Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/jarallax.css">
+	<link rel="stylesheet" href="css/work.css">
+
+	<!-- scroll style -->
+    <link rel="stylesheet" href="css/scroll.css" />
+
+</head>
+<body>
+	<!--- for scroll bar ----->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+
+    <header>
+		<ul class="navigation">
+			<li><a href="index.html">About Me</a></li>
+			<li><a href="design.html">Design</a></li>
+			<li><a href="team.html">Work</a></li>
+			<li><a href="skills.html">Hall of Fame</a></li>
+		</ul>
+	</header>
+
+	<section>
+		<div class="wbox">
+			<h2 data-jarallax-element="0 -200"> Clean Energy Lab </h2>
+			<div class="wcontainer">
+				<div class="wimgBx jarallax">
+					<video src="images/work/crack_image.mp4" autoplay muted loop class="jarallax-img"></video>
+				</div>
+			
+				<div class="wcontent" data-jarallax-element="-200 0">
+					<p>Mechanical Engineering entails the application of the principles of Mechanics and Material Science for design, analysis, manufacturing, and maintenance of mechanical systems.The Clean Energy Lab utilizes Machine Learning models and nano-scale analysis tools to develop and test materials. While the second year of Mechanical Engineering at university helped gain knowledge about designing, prototyping, and analysing on a macro-scale, through this research, I got the opportunity to explore the dynamics/properties of structures on a(n) nano/atomic scale. The gif is a molecular dynamic simulation of the crack proogation on a 2D tensile pulled solid.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="wbox">
+			<h2 data-jarallax-element="0 200"> Coding Instructor </h2>
+			<div class="wcontainer">
+				<div class="wimgBx jarallax">
+					<img src="images/work/jci.jpg" class="jarallax-img">
+				</div>
+			
+				<div class="wcontent" data-jarallax-element="-200 0">
+					<p> I was honored to work for the Outreach Office of the Faculty of Applied Science & Engineering at the University of Toronto. As a Coding Instructor, I worked to teach and facilitate various online innovative STEM workshops and activities with a focus on coding, digital literacy, and creative design. To be more specific, I had the opportunity to conduct workshops on Python programming, Circuits with code, Website Development (HTML, CSS, JS), and Minecraft Block Coding.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="js/jarallax_files/jarallax.js"></script>
+	<script src="js/jarallax_files/jarallax-element.js"></script>
+	<script type="text/javascript">
+		jarallax(document.querySelectorAll('.jarallax'), {
+		    speed: 0.5
+		});
+	</script>
+
+	<!-- scrollbar JS -->
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
+
+</body>
+</html>
