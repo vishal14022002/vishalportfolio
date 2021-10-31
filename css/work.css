@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins' , sans-serif;
+}
+
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px;
+	z-index: 100;
+}
+.navigation
+{
+	display: flex;
+	margin-left: 20px;
+}
+.navigation li
+{
+	list-style: none;
+	margin: 0 10px;
+}
+.navigation li a
+{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.navigation li:hover a
+{
+	color: #de0611;
+}
+body
+{
+	background: #111;
+	padding-bottom: 300px;
+	overflow-x: hidden;
+}
+body:before
+{
+	content: 'WORK';
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 16em;
+	font-weight: 700;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+}
+section
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+section h2
+{
+	margin-left: 200px;
+	font-size: 4em;
+	color: #fff;
+	margin-bottom: 20px;
+}
+section .wcontainer
+{
+	position: relative;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section:nth-child(even) .wcontainer
+{
+	flex-direction: row-reverse;
+}
+section .wcontainer .wimgBx
+{
+	position: relative;
+	width: 800px;
+	height: 400px;
+	overflow: hidden;
+	box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+}
+section .wcontainer .wimgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+section .wcontainer .wcontent
+{
+	position: absolute;
+	right: 0;
+	margin-top: 200px;
+	margin-bottom: 40px;
+	padding: 40px;
+	background: #333;
+	z-index: 1;
+	max-width: 400px;
+	color: #fff;
+	box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+	border-bottom: 6px solid #4ac7ff;
+} 
+section:nth-child(even) .wcontainer .wcontent
+{
+	left: 0;
+}
+
+
+@media (max-width: 991px)
+{
+	section h2
+	{
+		font-size: 50px;
+	}
+	header
+	{
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+	.navigation
+	{
+		display: flex;
+		margin: 10px 0;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	section .wcontainer .wimgBx
+	{
+		position: relative;
+		margin-left: 60px;
+		width: 500px;
+		height: 250px;
+		overflow: hidden;
+		box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+	}
+	section .wcontainer .wcontent
+	{
+		position: absolute;
+		right: 0;
+		font-size: 12px;
+		margin-top: 100px;
+		margin-bottom: 20px;
+		margin-right: 40px;
+
+		padding: 20px;
+		background: #333;
+		z-index: 1;
+		max-width: 350px;
+		max-height: 320px;
+		color: #fff;
+		box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+		border-bottom: 6px solid #4ac7ff;
+		justify-content: center;
+	} 
+}
